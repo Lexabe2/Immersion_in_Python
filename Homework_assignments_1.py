@@ -49,7 +49,6 @@ try:
     LIMITATION = 100000
     i = 1
     counter = 0
-    flag = True
     if number > LIMITATION:
         print("Вы ввели число больше 100 тыс.")
     else:
