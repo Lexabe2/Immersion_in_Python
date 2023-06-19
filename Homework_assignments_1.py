@@ -75,7 +75,6 @@ except ValueError:
 LOWER_LIMIT = 0
 UPPER_LIMIT = 1000
 num = randint(LOWER_LIMIT, UPPER_LIMIT)
-print(num)
 COUNTER = 10
 i = 0
 while i < COUNTER:
