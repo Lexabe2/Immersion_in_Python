@@ -6,13 +6,14 @@ b = input("Введите вторую дробь в формате x/x: ").spli
 
 product_of_fractions = f"{int(a[0]) * int(b[0])}/{int(a[1]) * int(b[1])}"
 
-print(f"Произведение дробей: {product_of_fractions}")
-
 common_divisor = int(a[1]) * int(b[1])
 a = f"{int(a[0]) * common_divisor // int(a[1])}/{common_divisor}"
 b = f"{int(b[0]) * common_divisor // int(b[1])}/{common_divisor}"
 sum_of_fractions = f"{str(int(a[0]) + int(b[0]))}/{str(common_divisor)}"
 
-print(f"Сложение дробей: {sum_of_fractions}")
+print(f"Сложение дробей: {sum_of_fractions}"
+      f"\nПроизведение дробей: {product_of_fractions}")
+
+
 
 
