@@ -5,22 +5,22 @@
 
 # Решение №1
 
-# list_numbers = [1, 2, 3, 1, 2, 4, 5]
-# new_list = []
+list_numbers = [1, 2, 3, 1, 2, 4, 5]
+new_list = []
 
-# for number in list_numbers:
-#     if list_numbers.count(number) > 1 and number not in new_list:
-#         new_list.append(number)
+for number in list_numbers:
+    if list_numbers.count(number) > 1 and number not in new_list:
+        new_list.append(number)
 
-# print(new_list)
+print(new_list)
 
 # Решение №2
 
-# list_numbers = [1, 2, 3, 1, 2, 4, 5]
-# new_list = []
-#
-# for number in list_numbers:
-#     if list_numbers.count(number) > 1:
-#         new_list.append(number)
-#
-# print(list(set(new_list)))
+list_numbers = [1, 2, 3, 1, 2, 4, 5]
+new_list = []
+
+for number in list_numbers:
+    if list_numbers.count(number) > 1:
+        new_list.append(number)
+
+print(list(set(new_list)))
