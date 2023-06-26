@@ -10,9 +10,9 @@ for key, value in camping_kit.items():
         list_inventory.append(key)
 
 if len(camping_kit) > len(list_inventory):
-    for i in camping_kit:
-        if i not in list_inventory:
-            remained.append(i)
+    for invent in camping_kit:
+        if invent not in list_inventory:
+            remained.append(invent)
     print(f"Поместилось {list_inventory}, не поместилось {remained}")
 else:
     print(f"Постилось {list_inventory}, ничего не осталось")
