@@ -8,11 +8,12 @@ def __year(number: int) -> bool:
         return True
     return False
 
+a = gv[1:]
 
-def date(date_str: str, bracket=gv[1:]) -> bool:
+def date(date_str: str) -> bool:
     rezzul = []
-    if bracket:
-        d, m, y = [x for x in map(int, bracket)]
+    if a:
+        d, m, y = [x for x in map(int, a)]
     else:
         d, m, y = [x for x in map(int, date_str.split('.'))]
     if all((0 < d < 32, 0 < m < 13, 0 < y < 10000)):
@@ -29,4 +30,4 @@ def date(date_str: str, bracket=gv[1:]) -> bool:
 
 
 if __name__ == '__main__':
-    print(date('29.02.2001'))
+    print(date(a))
