@@ -1,19 +1,32 @@
+# Напишите следующие функции:
+# * Нахождение корней квадратного уравнения
+# * Генерация csv файла с тремя случайными числами в каждой строке. 
+#   100-1000 строк.
+# * Декоратор, запускающий функцию нахождения корней квадратного 
+#   уравнения с каждой тройкой чисел из csv файла.
+# * Декоратор, сохраняющий переданные параметры и результаты работы 
+#   функции в json файл.
+
 import json
 import csv
 import random
 from typing import Callable
 
 name_file = "result.csv"
+MIN_LINES = 100
+MAX_LINES = 1000
+MIN_NUMBER = 1
+MAX_NUMBER = 100
 
 
 def write_number_csv():
     with open(f"{name_file}", mode="w", encoding='utf-8') as w_file:
         file_writer = csv.writer(w_file, delimiter=",", lineterminator="\r")
-        for i in range(random.randint(100, 1000)):
-            r_1 = random.randint(1, 100)
-            r_2 = random.randint(1, 100)
-            r_3 = random.randint(1, 100)
-            file_writer.writerow([r_1, r_2, r_3])
+        for i in range(random.randint(MIN_LINES, MAX_LINES)):
+            num_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+            num_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+            num_3 = random.randint(MIN_NUMBER, MAX_NUMBER)
+            file_writer.writerow([num_1, num_2, num_3])
 
 
 def json_write(funk: Callable) -> Callable:
@@ -61,5 +74,7 @@ def square_root(a: int | float, b: int | float,
         return f'x = {-b / (2 * a)}'
     return f'первый корень {x_1=} второй корень {x_2=}'
 
+
 write_number_csv()
 square_root()
+
