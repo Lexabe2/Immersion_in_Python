@@ -2,7 +2,7 @@ import unittest
 import triangle
 
 
-class TestSum(unittest.TestCase):
+class TestTriangle(unittest.TestCase):
     def setUp(self) -> None:
         self.triangle_versatile = triangle.Triangle(1, 2, 3)
         self.triangle_isosceles = triangle.Triangle(2, 2, 3)
